@@ -7,7 +7,6 @@ from .import views
 #     path('<int:pk>/', views.product_detail),
 # ]
 
-
 urlpatterns = [
     path('', views.ProductList.as_view()),
     path('<int:pk>/', views.ProductDetail.as_view()),
