@@ -1,12 +1,13 @@
-from django.db import models
 
+from django.db import models
 from products.models import Product
 
 # Create your models here.
 
 class Review(models.Model):
-    item_review = models.ForeignKey(Product, null=True, blank=True, on_delete=models.SET_NULL)
-    review_text = models.CharField(max_length=2000)
+    item_name = models.CharField(max_length=255, default='Review')
+    review_text = models.TextField()
+    product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
 
 
 # class Product(models.Model):
@@ -22,3 +23,5 @@ class Review(models.Model):
 # •	You should also add a new endpoint that will be a little different from standard CRUD:
 # •	Create an endpoint which will allow you to pass in a Product’s id and it will respond with a collection of all the Reviews associated with that Product.
 # This can be using class based or function based views, your choice!
+#################
+#django many to one

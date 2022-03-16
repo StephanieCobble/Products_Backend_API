@@ -5,4 +5,4 @@ from .models import Review
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['item_review', 'review_text']
+        fields = ['id', 'item_name', 'review_text', 'product']

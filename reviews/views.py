@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 
 # Create your views here.
 
@@ -47,3 +47,4 @@ class ReviewDetail(APIView):
         review = self.get_object(pk)
         review.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
