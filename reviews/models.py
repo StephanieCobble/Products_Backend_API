@@ -10,12 +10,6 @@ class Review(models.Model):
     product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
 
 
-# class Product(models.Model):
-#     title = models.CharField(max_length=255)
-#     description = models.CharField(max_length=255)
-#     picture = models.CharField(max_length=2000, default='')
-#     price = models.DecimalField(max_digits=8, decimal_places=2)
-#     inventory_quantity = models.IntegerField()
 ####################
 # •	Add a new app based around a Review model with full CRUD functionality.
 # •	Review should have a many to one relationship with Products (One Product, Many Reviews)
