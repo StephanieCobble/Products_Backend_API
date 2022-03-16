@@ -46,8 +46,8 @@
 # from rest_framework.decorators import api_view
 
 
-from django.http import Http404
-from rest_framework.views import APIView 
+from django.http import Http404  #added import
+from rest_framework.views import APIView  #added import
 
 from rest_framework.response import Response  #
 from .serializers import ProductSerializer  #
