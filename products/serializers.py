@@ -7,11 +7,3 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'picture', 'price', 'inventory_quantity']
 
 
-
-# from rest_framework import serializers
-# from .models import Car
-
-# class CarSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Car
-#         fields = ['id', 'make', 'model', 'year', 'price']
