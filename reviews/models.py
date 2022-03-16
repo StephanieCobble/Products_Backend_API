@@ -4,7 +4,7 @@ from products.models import Product
 
 # Create your models here.
 
-class Reviews(models.Model):
+class Review(models.Model):
     item_review = models.ForeignKey(Product, null=True, blank=True, on_delete=models.SET_NULL)
     review_text = models.CharField(max_length=2000)
 
