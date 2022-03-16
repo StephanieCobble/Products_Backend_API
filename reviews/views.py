@@ -48,3 +48,10 @@ class ReviewDetail(APIView):
         review.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
+#new class for the reviews tied to one product
+class ReviewFK(APIView):
+    def get(self, request, fk, format=None):
+        review = Review.objects.filter(product=fk)
+        serializer = ReviewSerializer(review, many=True)
+        return Response(serializer.data)
